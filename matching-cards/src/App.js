@@ -17,7 +17,7 @@ function App() {
   const [turns, setTurns] = useState(0);
   const [choiceone, setChoiceone] = useState(null);
   const [choicetwo, setChoicetwo] = useState(null);
-  const [disabled,setDisabled]=useState(false)
+  const [disabled, setDisabled] = useState(false);
 
   //shufflecards
   const ShuffleCards = () => {
@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     if (choiceone && choicetwo) {
-      setDisabled(true)
+      setDisabled(true);
       if (choiceone.src === choicetwo.src) {
         setCards((prevCards) => {
           return prevCards.map((card) => {
@@ -58,14 +58,13 @@ function App() {
     }
   }, [choiceone, choicetwo]);
 
-
   //reset choice
 
   const resetTurn = () => {
     setChoiceone(null);
     setChoicetwo(null);
     setTurns((prevturns) => prevturns + 1);
-    setDisabled(false)
+    setDisabled(false);
   };
 
   return (
@@ -84,7 +83,7 @@ function App() {
           />
         ))}
       </div>
-      {cards.length>0 &&<p>Turns:{turns}</p>}
+      {cards.length > 0 && <p>Turns:{turns}</p>}
     </div>
   );
 }

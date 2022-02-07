@@ -7,9 +7,9 @@ export default function SingleCard(props) {
   const isdisable = props.disabled;
 
   const handleClick = () => {
-      if (!isdisable) {
-          handlechoice(card);
-      }
+    if (!isdisable) {
+      handlechoice(card);
+    }
   };
 
   return (
